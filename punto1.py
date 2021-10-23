@@ -31,3 +31,4 @@ else:
 #Transforación de lista a Tupla
 tuple = tuple(listArticulos)
 print(tuple,len(tuple))
+print(tuple[1])
