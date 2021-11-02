@@ -1,19 +1,31 @@
 mascotas = {
-    'Gato' : [],
-    'Perro' : [],
-    'Loro' : [],
-    'Pez' : [],
+    'gato': [],
+    'perro': [],
+    'loro': [],
+    'pez': [],
 }
-
-menu = "Especies. \n1. Agregar Especies\n2. Ver especies\3. Salir"
-
 while(True):
-    opcion = input("Por favor ingrese el nombre de de la especie").lower()
-    if((opcion == "Gato" or opcion == "Perro") or (opcion == "Loro" or opcion == "Pez")):
-        if(len(mascotas[opcion])<4):
-            mascotas[opcion].append(input(f"Ingrese la raza de {opcion}"))
+    menu = input("Especies. \n1. Agregar Especies\n2. Ver especies\n3. Salir ")
+    if(menu == "1"):
+        opcion = input(
+            "Por favor ingrese el nombre de de la especie (Gato, perro, loro, pez) ").lower()
+        if((opcion == "gato" or opcion == "perro") or (opcion == "loro" or opcion == "pez")):
+            if(len(mascotas[opcion]) < 4):
+                mascotas[opcion].append(input(f"Ingrese la raza de {opcion} "))
+                print("Se ha agregado")
+            else:
+                print("Esta especie ya esta llena ")
         else:
-            print("Esta especie ya esta llena")
+            print("Esta especie no existe")
+    elif(menu == "2"):
+        opcion = input(
+            "Por favor ingrese el nombre de de la especie (Gato, perro, loro, pez) ").lower()
+        if((opcion == "gato" or opcion == "perro") or (opcion == "loro" or opcion == "pez")):
+            print(mascotas[opcion])
+        else:
+            print("Esa especie no exite")
+    elif(menu == "3"):
+        print("Adiós")
+        break
     else:
-        print("Esta especie no existe")
-    
+        print("Opción incorrecta, por favor vuelva a intentar")
