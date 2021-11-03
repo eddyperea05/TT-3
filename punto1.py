@@ -13,7 +13,7 @@ def mientras(list, limit,text):
 #Se agregan los artuculos de la vida cotidiana
 listArticulos = []
 text = "articulo de la vida cotidiana"
-#mientras(listArticulos,10,text)
+mientras(listArticulos,10,text)
 print(listArticulos)
 #Se agregan lo animales
 listAnimales = []
